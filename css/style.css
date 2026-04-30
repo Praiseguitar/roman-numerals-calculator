@@ -69,6 +69,7 @@ header h1{
   font-size: 40px;
   /* border: 1px solid ; */
   border-radius: 10px;
+  border: none;
   background-color: #22C55E;
   color: #FFFFFF;
   height: 50px;
