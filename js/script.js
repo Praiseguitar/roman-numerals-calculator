@@ -1,15 +1,27 @@
 let display = document.getElementById("display")
-document.querySelectorAll('.btns').forEach(btn => {
-  btn.onclick = () => append(btn.textContent);
-});
 
+const btns = document.querySelectorAll('.btns')
+
+btns.forEach(btn => {
+  btn.onclick = () =>{ append(btn.dataset.value);};
+});
+ 
 
 document.getElementById('btn=').onclick = () => calculate();
 document.getElementById('btnclear').onclick = () => clear();
 document.getElementById('convertRoman').onclick = () => convertToRomanDisplay()
 document.getElementById('delBtn').onclick = () => delnums();
 
+// const operators = ["+","-","/","*","."];
+// const lastChr = display.value.slice(-1);
 function append(val){
+  const operators = ["+","-","/","*",".","%"];
+  const lastChr = display.value.slice(-1);
+  if (operators.includes(val) && operators.includes(lastChr) ) {
+    console.log('Two operator can not follow eachOther');
+    return
+    
+  }
   display.value += val;
 }
 
@@ -68,17 +80,17 @@ let symbols = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
 let romanpair = valuesNos.map((value, index) =>({value, symbol: symbols[index]}));
 console.log(romanpair)
 
- function convertRoman(num){
-   let result = "";
-   for(let i=0; i< romanpair.length; i++){
-     let currentval = romanpair[i];
+function convertRoman(num){
+  let result = "";
+  for(let i=0; i< romanpair.length; i++){
+    let currentval = romanpair[i];
      
-     while(num >= currentval.value) {
-       result += currentval.symbol;
-       num -= currentval.value;
-     }
+    while(num >= currentval.value) {
+      result += currentval.symbol;
+      num -= currentval.value;
+    }
      
-   }
-   return result;
- }
+  }
+  return result;
+}
  

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roman Numeral Calculator</title>
+  <link rel="stylesheet" href="./icons/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -13,36 +14,41 @@
     </header>
 
     <div id="general_container">
-      <div id="cal_container" class="cal_container">
-        <input type="text" id="display" class="display" disabled>
-        <div class="CE_Del_btn">
-          <button id="btnclear">CE</button>
-          <button id="delBtn">DEL</button>
+      <div class="calculatorContainer">
+        <div class="dotDesign">
+          <strong class="dotDesign1"></strong>
+          <strong class="dotDesign2"></strong>
+          <strong class="dotDesign3"></strong>
         </div>
-
-        <div id="btnContainer" class="btnContainer">
-          <button class="btns">1</button>
-          <button class="btns">2</button>
-          <button class="btns">3</button>
-          <button class="btns">4</button>
-          <button class="btns">5</button>
-          <button class="btns">6</button>
-          <button class="btns">7</button>
-          <button class="btns">8</button>
-          <button class="btns">9</button>
-          <button class="btns">+</button>
-          <button class="btns">0</button>
-          <button class="btns">/</button>
-          <button class="btns">*</button>
-          <button class="btns">-</button>
-          <button class="btns">.</button>
+        <div id="cal_container" class="cal_container">
+          <input type="text" id="display" class="display" disabled>
+          <div id="btnContainer" class="btnContainer">
+            <button id="delBtn" class="btnsection1"><i class="fa-solid fa-delete-left"></i></button>
+            <button id="btnclear" class="btnsection1">AC</button>
+        
+            <button id="btns" class="btns" data-value="%" style="background-color: #717577;"><i class="fa-solid fa-percent"></i></button>
+            <button id="yellowBtns" class="btns" data-value="/"><i class="fa-solid fa-divide"></i></button>
+            <button  class="btns" data-value="1">1</button>
+            <button  class="btns" data-value="2">2</button>
+            <button  class="btns" data-value="3">3</button>
+            <button id="yellowBtns" class="btns" data-value="*"><i class="fa-solid fa-multiply"></i></button>
+            <button  class="btns" data-value="4">4</button>
+            <button  class="btns" data-value="5">5</button>
+            <button  class="btns" data-value="6">6</button>
+            <button id="yellowBtns" class="btns" data-value="-"> <i class="fa-solid fa-subtract"></i> </button>
+            <button  class="btns"  data-value="7">7</button>
+            <button  class="btns" data-value="8">8</button>
+            <button  class="btns" data-value="9">9</button>
+            <button id="yellowBtns" class="btns" data-value="+"><i class="fa-solid fa-add"></i></button>
+            <button class="btns" id="convertRoman">RN</button>
+            <button  class="btns" data-value="0">0</button>
+            <button  class="btns" data-value=".">.</button>
+            <button class="btns" id="btn=" style="font-size: 40px; background-color: #FF8B00;">=</button>
+          </div>
+        
+        
+        
         </div>
-        <div class="equal_roman_btn">
-          <button class="btns" id="btn=">=</button>
-          <button class="btns" id="convertRoman">RN</button>
-        </div>
-
-
       </div>
     </div>
     

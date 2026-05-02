@@ -4,7 +4,7 @@
   font-family: Sans-Serif;
 }
 body{
-  background-color: #121212;
+  background-color: white;
 }
 header{
   padding: 20px;
@@ -14,83 +14,109 @@ header h1{
   color: #11e060;
 }
 #general_container{
-  /* border: 2px solid yellow; */
-  padding: 50px;
+  border-radius: 50px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
   margin-top: 20px;
-  /* height: 60vh ; */
+}
+.calculatorContainer{
+  border-radius: 50px;
+  background-color: #24292D;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+    box-shadow: 0px 0px 20px rgba(141, 126, 126, 0.7);
+}
+.dotDesign{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px; 
+  margin-bottom: 10px;
+  margin-top: 5px;
+  width: 100%;
+
+}
+.dotDesign1{
+  background-color: #FF5C60;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.dotDesign2{
+  background-color: #FAC800;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.dotDesign3{
+  background-color: #474C50;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 
 .cal_container{
-  /* border: 2px solid yellow; */
   border-radius: 10px;  
-  width: 90%;
-  box-shadow: 0px 0px 5px rgba(247, 246, 246, 0.7);
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  width: 350px;
 }
-.display{
-  height: 6vh;
-  background-color:#5A5A5A ;
+#display{
+  height: 10vh;
+  background-color: #24292D;
+  border: none;
   color: #FFFFFF;
-  font-size: 25px;
+  font-size: 3rem;
+  text-align:right;
+  margin-bottom: 20px;
 } 
 
 .btnContainer{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  /* place-items: center; */
-  gap: 5px;
+  grid-template-columns: repeat(4,1fr);
+  gap: 3px;
   margin-top: 5px;
+  width: 100%;
 
 }
-.CE_Del_btn{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 5px;
-}
-.CE_Del_btn button{
+
+.btnsection1{
   text-align: center;
   font-size: 30px;
-  /* border: 1px solid ; */
   border-radius: 10px;
-  background-color: #22C55E;
+  border: none;
+  background-color: #717577;
   color: #FFFFFF;
-  width: 33%;
-  height: 50px;
+  height: 80px;
+  width: 80px;
   cursor: pointer;
+  border-radius: 50%;
 }
 .btns{
   text-align: center;
-  font-size: 40px;
-  /* border: 1px solid ; */
-  border-radius: 10px;
-  border: none;
-  background-color: #22C55E;
-  color: #FFFFFF;
-  height: 50px;
-  cursor: pointer;
-}
-.equal_roman_btn{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 5px;
-}
-.equal_roman_btn button{
-    text-align: center;
   font-size: 30px;
-  /* border: 1px solid ; */
-  border-radius: 10px;
-  background-color: #22C55E;
+  border: 1px solid ;
+  border-radius: 50%;
+  border: none;
+  background-color: #464A4C;
   color: #FFFFFF;
-  width: 33%;
-  height: 50px
+  height: 80px;
+  width:  80px;
+  cursor: pointer;
+
 }
+#yellowBtns{
+  background-color: #FF8B00;
+}
+
 
 /* -----------------desktop mode */
 
@@ -99,24 +125,16 @@ header h1{
     text-align: center;
   }
   .cal_container{
-    width: 60%;
-    height: 60vh;
+    width: 370px;
+    /* width: 60%;
+    height: 60vh; */
   }
   .display{
     height:7vh;
     margin-bottom: 10px;
     padding: 5px;
   }
-  .CE_Del_btn button{
-    height: 7vh;
-    margin-bottom: 5px;
-  }
-  .btns{
-    height: 6vh;
-  }
-  .equal_roman_btn button {
-    height: 7vh;
-  }
+
 
   
 
